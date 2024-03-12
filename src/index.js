@@ -1,5 +1,5 @@
-import { readUserInput } from './functions';
-import commonMessages from './messages';
+import { readUserInput } from './functions.js';
+import commonMessages from './messages.js';
 
 /**
  * @typedef {{

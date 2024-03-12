@@ -1,8 +1,8 @@
-import { readUserInput, getRandomNumber } from '../../functions';
-import isPrime from './functions';
-import messages from './messages';
-import commonMessages from '../../messages';
-import { makeGame, makeAnswer } from '../../index';
+import { readUserInput, getRandomNumber } from '../../functions.js';
+import isPrime from './functions.js';
+import messages from './messages.js';
+import commonMessages from '../../messages.js';
+import { makeGame, makeAnswer } from '../../index.js';
 
 /**
  * @param {number} [steps=3]

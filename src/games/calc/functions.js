@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../../functions';
+import { getRandomNumber } from '../../functions.js';
 
 const expressions = /** @type {const} */ ({
   add: 'add',
