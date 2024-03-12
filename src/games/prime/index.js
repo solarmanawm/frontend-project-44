@@ -14,11 +14,12 @@ export const main = (steps = 3) => {
         executeRound: () => {
             const num = getRandomNumber();
             const isNumberPrime = isPrime(num);
+
+            console.log(`${commonMessages.question}${num}`);
+
             const userInput = readUserInput(commonMessages.yourAnswer);
             const answer = userInput === messages.yes ? messages.yes : messages.no;
             const correct = isNumberPrime ? messages.yes : messages.no;
-
-            console.log(`${commonMessages.question}${num}`);
 
             return makeAnswer(answer, correct);
         },
