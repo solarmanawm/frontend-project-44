@@ -11,4 +11,8 @@ export const readUserInput = (question) => readlineSync.question(question);
  * @param {number} max
  * @returns {number}
  */
-export const getRandomNumber = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1) + min);
+export const getRandomNumber = (min = 1, max = 100) => {
+  const calculated = Math.random() * (max - min + 1) + min;
+
+  return Math.floor(calculated);
+};
