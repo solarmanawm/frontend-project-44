@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+
 import { getRandomNumber } from '../../functions.js';
 
 const expressions = /** @type {const} */ ({

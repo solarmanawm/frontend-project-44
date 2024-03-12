@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+
 import { readUserInput, getRandomNumber } from '../../functions.js';
 import generateArithmeticProgression from './functions.js';
 import messages from './messages.js';

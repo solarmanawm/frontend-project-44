@@ -23,7 +23,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
-    'import/extensions:': 'always',
+    'import/extensions:': 0,
     'max-len': ['error', { code: 140, tabWidth: 4 }],
   },
 };

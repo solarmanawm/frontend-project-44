@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+
 import { readUserInput } from './functions.js';
 import commonMessages from './messages.js';
 
