@@ -1,29 +1,29 @@
-import { readUserInput, getRandomNumber } from '../../../src/functions.js';
-import { isEven as inNumberEven } from './functions.js';
-import messages from './messages.js';
-import commonMessages from '../../messages.js';
-import { makeGame, makeAnswer } from '../../index.js';
+import { readUserInput, getRandomNumber } from '../../functions';
+import inNumberEven from './functions';
+import messages from './messages';
+import commonMessages from '../../messages';
+import { makeGame, makeAnswer } from '../../index';
 
 /**
  * @param {number} [steps=3]
  */
-export const main = (steps = 3) => {
-    const options = {
-        description: messages.description,
-        steps,
-        executeRound: () => {
-            const number = getRandomNumber();
-            const isEven = inNumberEven(number);
+export default (steps = 3) => {
+  const options = {
+    description: messages.description,
+    steps,
+    executeRound: () => {
+      const number = getRandomNumber();
+      const isEven = inNumberEven(number);
 
-            console.log(`${commonMessages.question}${number}`)
+      console.log(`${commonMessages.question}${number}`);
 
-            const userInput = readUserInput(commonMessages.yourAnswer);
-            const answer = userInput === messages.yes ? messages.yes : messages.no;
-            const correct = isEven ? messages.yes : messages.no;
- 
-            return makeAnswer(answer, correct);
-        },
-    };
+      const userInput = readUserInput(commonMessages.yourAnswer);
+      const answer = userInput === messages.yes ? messages.yes : messages.no;
+      const correct = isEven ? messages.yes : messages.no;
 
-    makeGame(options);
+      return makeAnswer(answer, correct);
+    },
+  };
+
+  makeGame(options);
 };

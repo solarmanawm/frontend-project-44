@@ -1,9 +1,9 @@
-export const generateArithmeticProgression = (start, diff, count) => {
-    const progression = [];
+export default (start, diff, count) => {
+  const progression = [];
 
-    for (let i = 0; i < count; i++) {
-        progression.push(start + diff * i);
-    }
+  for (let i = 0; i < count; i += 1) {
+    progression.push(start + diff * i);
+  }
 
-    return progression;
+  return progression;
 };

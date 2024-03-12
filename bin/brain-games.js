@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readUserName } from '../src/cli.js';
+import readUserName from '../src/cli';
 
 console.log('Welcome to the Brain Games!');
 

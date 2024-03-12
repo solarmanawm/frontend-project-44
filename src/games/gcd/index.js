@@ -1,28 +1,28 @@
-import { readUserInput, getRandomNumber } from '../../../src/functions.js';
-import { calculateGcd } from './functions.js';
-import messages from './messages.js';
-import commonMessages from '../../messages.js';
-import { makeGame, makeAnswer } from '../../index.js';
+import { readUserInput, getRandomNumber } from '../../functions';
+import calculateGcd from './functions';
+import messages from './messages';
+import commonMessages from '../../messages';
+import { makeGame, makeAnswer } from '../../index';
 
 /**
  * @param {number} [steps=3]
  */
-export const main = (steps = 3) => {
-    const options = {
-        description: messages.description,
-        steps,
-        executeRound: () => {
-            const a = getRandomNumber();
-            const b = getRandomNumber();
-            const gcd = calculateGcd(a, b);
+export default (steps = 3) => {
+  const options = {
+    description: messages.description,
+    steps,
+    executeRound: () => {
+      const a = getRandomNumber();
+      const b = getRandomNumber();
+      const gcd = calculateGcd(a, b);
 
-            console.log(`${commonMessages.question}${a} ${b}`);
+      console.log(`${commonMessages.question}${a} ${b}`);
 
-            const answer = +readUserInput(commonMessages.yourAnswer);
- 
-            return makeAnswer(answer, gcd);
-        },
-    };
+      const answer = +readUserInput(commonMessages.yourAnswer);
 
-    makeGame(options);
+      return makeAnswer(answer, gcd);
+    },
+  };
+
+  makeGame(options);
 };

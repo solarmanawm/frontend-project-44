@@ -1,11 +1,14 @@
-export const calculateGcd = (a, b) => {
-    while (a != 0 && b != 0) {
-        if (a > b) {
-            a = a % b;
-        } else {
-            b = b % a;
-        }
-    }
+export default (a, b) => {
+  let n1 = a;
+  let n2 = b;
 
-    return a + b;
+  while (n1 !== 0 && n2 !== 0) {
+    if (n1 > n2) {
+      n1 %= n2;
+    } else {
+      n2 %= n1;
+    }
+  }
+
+  return n1 + n2;
 };
